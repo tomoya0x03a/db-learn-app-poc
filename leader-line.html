@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            /* 開始位置の要素 */
+#startElement {
+  /* 高さ */
+  height: 4em;
+  /* 幅 */
+  width: 4em;
+  /* 背景色 */
+  background-color: lightpink;
+}
+
+/* 終了位置の要素 */
+#endElement {
+  /* マージン */
+  margin-top: 50px;
+  margin-left: 150px;
+  /* 高さ */
+  height: 4em;
+  /* 幅 */
+  width: 4em;
+  /* 背景色 */
+  background-color: lightblue;
+}
+        </style>
+    </head>
+    <body>
+        <div id="startElement">開始位置</div>
+        <div id="endElement">終了位置</div>
+        <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.1/leader-line.min.js"></script>
+        <script>
+            // 開始位置の要素
+const start = document.getElementById("startElement");
+// 終了位置の要素
+const end = document.getElementById("endElement");
+
+/** 線を弾くleader-line.jsの関数
+ * start 開始位置の要素,
+ * end 終了位置の要素
+ */
+new LeaderLine(start, end, {
+    color: 'black', 
+    size: 3,
+    startPlug: 'arrow1',
+    endPlug: 'behind'
+});
+        </script>
+    </body>
+</html>
