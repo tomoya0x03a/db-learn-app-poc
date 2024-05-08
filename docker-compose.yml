@@ -10,7 +10,7 @@ services:
       source: ./app
       target: /usr/src/app
     #"react-app"の部分がプロジェクト名になる
-    command: sh -c "cd react-app && yarn start" 
+    command: sh -c "cd react-app && yarn upgrade && yarn start" 
     ports:
       - 1111:3000
     stdin_open: true #標準入力をコンテナと紐付ける
